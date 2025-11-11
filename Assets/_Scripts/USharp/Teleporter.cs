@@ -1,6 +1,5 @@
 ﻿
 using UdonSharp;
-using UnityEditor.EditorTools;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;

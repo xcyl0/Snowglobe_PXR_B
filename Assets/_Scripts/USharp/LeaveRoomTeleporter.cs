@@ -10,6 +10,6 @@ public class LeaveRoomTeleporter : UdonSharpBehaviour
     [SerializeField] private Transform teleportDestination;
     public override void Interact()
     {
-        roomManager.ReleaseLocalRoomAndTeleport(teleportDestination);
+        //roomManager.ReleaseLocalRoomAndTeleport(teleportDestination);
     }
 }
