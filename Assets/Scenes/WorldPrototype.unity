@@ -159,7 +159,7 @@ PrefabInstance:
     - target: {fileID: 4691497282312973448, guid: 59fcd2e42ff5d7741951e4ec90387de7,
         type: 3}
       propertyPath: NetworkIDs.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4691497282312973448, guid: 59fcd2e42ff5d7741951e4ec90387de7,
         type: 3}
@@ -236,6 +236,11 @@ PrefabInstance:
       propertyPath: NetworkIDs.Array.data[6].gameObject
       value: 
       objectReference: {fileID: 948307410}
+    - target: {fileID: 4691497282312973448, guid: 59fcd2e42ff5d7741951e4ec90387de7,
+        type: 3}
+      propertyPath: NetworkIDs.Array.data[7].gameObject
+      value: 
+      objectReference: {fileID: 1098965014}
     - target: {fileID: 7251807305215750877, guid: 59fcd2e42ff5d7741951e4ec90387de7,
         type: 3}
       propertyPath: m_LocalPosition.x
