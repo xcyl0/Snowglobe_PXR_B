@@ -1,19 +1,15 @@
 ﻿
 using UdonSharp;
+using UnityEditor.EditorTools;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
 
 public class Teleporter : UdonSharpBehaviour
 {
-    [SerializeField] private RoomManager roomManager;
-    //[SerializeField] private Transform destination;
-
-    override public void Interact()
+    [SerializeField] private Transform destination;
+    public override void Interact()
     {
-        Debug.Log("Interacted with a teleporter");
-        roomManager.AssignAndTeleport();
-        //var localplayer = Networking.LocalPlayer;
-        //localplayer.TeleportTo(destination.position, destination.rotation);
+        Networking.LocalPlayer.TeleportTo(destination.transform.position, Quaternion.identity);
     }
 }

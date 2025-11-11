@@ -149,7 +149,7 @@ public class RoomManager : UdonSharpBehaviour
         }
         localRoomAssignmentIndex = -1;
 
-        if (lobbySpawn != null) localPlayer.TeleportTo(lobbySpawn.position, Quaternion.identity);
+        localPlayer.TeleportTo(destination.position, Quaternion.identity);
     }
 
 }
