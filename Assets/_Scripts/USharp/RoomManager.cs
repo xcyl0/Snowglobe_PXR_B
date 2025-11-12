@@ -22,5 +22,4 @@ public class RoomManager : UdonSharpBehaviour
         RequestSerialization();
         Networking.LocalPlayer.TeleportTo(roomSpawns[occupancy].position, Quaternion.identity);
     }
-
 }
