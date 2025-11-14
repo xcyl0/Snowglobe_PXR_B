@@ -15,7 +15,7 @@ public class AdminVideoTrigger : UdonSharpBehaviour
     {
         Debug.Log("local player display name: " + Networking.LocalPlayer.displayName);
 
-        if (!Networking.IsInstanceOwner)
+        if (!Networking.IsInstanceOwner || !Networking.LocalPlayer.displayName.Equals("010n"))
         {
             gameObject.GetComponent<MeshRenderer>().enabled = false;
             gameObject.GetComponent<Collider>().enabled = false;
