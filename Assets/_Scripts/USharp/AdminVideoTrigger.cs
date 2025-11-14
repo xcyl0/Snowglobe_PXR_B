@@ -5,6 +5,7 @@ using VRC.SDK3.Components;
 using VRC.SDK3.Video.Components.AVPro;
 using VRC.SDKBase;
 using VRC.Udon;
+using VRC.Udon.Common.Interfaces;
 
 public class AdminVideoTrigger : UdonSharpBehaviour
 {
@@ -19,6 +20,11 @@ public class AdminVideoTrigger : UdonSharpBehaviour
     }
 
     public override void Interact()
+    {
+        SendCustomNetworkEvent(NetworkEventTarget.All, nameof(PlayVideo));
+    }
+
+    public void PlayVideo()
     {
         player.PlayURL(url);
     }
