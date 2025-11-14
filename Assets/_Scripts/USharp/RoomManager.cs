@@ -15,11 +15,10 @@ public class RoomManager : UdonSharpBehaviour
 
     public void AssignAndTeleport()
     {
-        Networking.SetOwner(Networking.LocalPlayer, gameObject);
         occupancy++;
         if (occupancy >= roomSpawns.Length)
             occupancy = 0;
-        RequestSerialization();
+
         Networking.LocalPlayer.TeleportTo(roomSpawns[occupancy].position, Quaternion.identity);
     }
 }
