@@ -16,11 +16,16 @@ public class AdminVideoTrigger : UdonSharpBehaviour
         Debug.Log("local player display name: " + Networking.LocalPlayer.displayName);
 
         if (!Networking.IsInstanceOwner)
-            gameObject.SetActive(false);
+        {
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            gameObject.GetComponent<Collider>().enabled = false;
+        }
+            
     }
 
     public override void Interact()
     {
+        if (Networking.IsInstanceOwner)
         SendCustomNetworkEvent(NetworkEventTarget.All, nameof(PlayVideo));
     }
 
