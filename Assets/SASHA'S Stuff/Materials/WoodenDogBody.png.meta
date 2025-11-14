@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0f129d822274ce94dbc6388e756b9629
+guid: 111e37653500c2e4ebc455d1a1aa9f5c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -30,7 +30,7 @@ TextureImporter:
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
