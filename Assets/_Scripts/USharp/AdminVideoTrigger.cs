@@ -12,10 +12,10 @@ public class AdminVideoTrigger : UdonSharpBehaviour
     [SerializeField] private VRCUrl url;
     private void Start()
     {
-       /* Debug.Log("local player display name: "+ Networking.LocalPlayer.displayName);
+        Debug.Log("local player display name: " + Networking.LocalPlayer.displayName);
 
         if (!Networking.IsInstanceOwner)
-            gameObject.SetActive(false);*/
+            gameObject.SetActive(false);
     }
 
     public override void Interact()
