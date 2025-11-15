@@ -7,13 +7,23 @@ using VRC.Udon;
 public class EnterRoomTeleporter : UdonSharpBehaviour
 {
     [SerializeField] private RoomManager roomManager;
+    [SerializeField] private Transform target;
+    [SerializeField] private float delay;
+    public bool inworld = false;
     //[SerializeField] private Transform destination;
 
     override public void Interact()
     {
         Debug.Log("Interacted with a teleporter");
         roomManager.AssignAndTeleport();
+        SendCustomEventDelayedSeconds("TeleportPlayer", delay);
         //var localplayer = Networking.LocalPlayer;
         //localplayer.TeleportTo(destination.position, destination.rotation);
+    }
+
+    public void TeleportPlayer()
+    {
+        if(!inworld)
+            Networking.LocalPlayer.TeleportTo(target.transform.position, Quaternion.identity);
     }
 }

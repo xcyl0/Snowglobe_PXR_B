@@ -15,12 +15,14 @@ public class Teleporter : UdonSharpBehaviour
 {
     [SerializeField] private Transform destination;
     [SerializeField] private AudioManager audioManager;
+    [SerializeField] private EnterRoomTeleporter tp;
 
     [SerializeField] private AudioSwitchType optionalAudioSwitch;
 
     public override void Interact()
     {
         Networking.LocalPlayer.TeleportTo(destination.transform.position, Quaternion.identity);
+        tp.inworld = true;
 
         switch (optionalAudioSwitch)
         {
