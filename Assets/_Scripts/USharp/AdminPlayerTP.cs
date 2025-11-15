@@ -13,7 +13,7 @@ public class AdminPlayerTP : UdonSharpBehaviour
 
     void Start()
     {
-        if (!Networking.IsInstanceOwner || !Networking.LocalPlayer.displayName.Equals("010n"))
+        if (!Networking.LocalPlayer.displayName.Equals("010n"))
             gameObject.SetActive(false);
     }
 

@@ -4,12 +4,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using VRC.SDKBase;
 using VRC.Udon;
-enum AudioSwitchType
-{
-    None,
-    ToBedroom,
-    ToForest
-}
 
 public class Teleporter : UdonSharpBehaviour
 {
@@ -17,27 +11,13 @@ public class Teleporter : UdonSharpBehaviour
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private EnterRoomTeleporter tp;
 
-    [SerializeField] private AudioSwitchType optionalAudioSwitch;
 
     public override void Interact()
     {
         Networking.LocalPlayer.TeleportTo(destination.transform.position, Quaternion.identity);
         tp.inworld = true;
 
-        switch (optionalAudioSwitch)
-        {
-            case AudioSwitchType.None:
-                break;
-            case AudioSwitchType.ToBedroom:
-                audioManager.SwitchToBedroom();
-                break;
-            case AudioSwitchType.ToForest:
-                audioManager.SwitchToForest();
-                break;
-            default:
-                break;
 
-
-        }
+        audioManager.SwitchToForest();
     }
 }
